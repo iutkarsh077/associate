@@ -1,0 +1,153 @@
+import type { Contact } from '../types/contact';
+
+export const INITIAL_CONTACTS: Contact[] = [
+  {
+    id: 'cnt-1',
+    name: 'Elena Rostova',
+    email: 'elena.rostova@aurora-health.io',
+    company: 'Aurora Health Tech',
+    role: 'VP of Engineering',
+    owner: 'Sarah Chen',
+    labels: ['Enterprise', 'High Priority'],
+    stage: 'Customer',
+    notes: 'Signed 2-year enterprise license in Q3. Requested customized SOC2 type II audit documentation and single sign-on mapping for their team of 140 engineers.',
+    updatedAt: '2026-09-28T14:20:00Z',
+  },
+  {
+    id: 'cnt-2',
+    name: 'Marcus Vance',
+    email: 'm.vance@vanguardanalytics.com',
+    company: 'Vanguard Analytics',
+    role: 'Principal Architect',
+    owner: 'Alex Rivera',
+    labels: ['Inbound', 'Cloud Native'],
+    stage: 'Lead',
+    // Missing notes intentionally
+    notes: '',
+    updatedAt: '2026-10-02T09:15:00Z',
+  },
+  {
+    id: 'cnt-3',
+    name: 'Aisha Patel',
+    email: 'aisha@zenithfintech.co',
+    company: 'Zenith Payments',
+    // Missing role intentionally
+    role: '',
+    owner: 'David Kim',
+    // Missing labels intentionally
+    labels: [],
+    stage: 'Prospect',
+    notes: 'Met at SaaStr London. Interested in replacing their legacy batch reporting pipeline with real-time webhooks. Follow up scheduled next Tuesday.',
+    updatedAt: '2026-10-05T16:45:00Z',
+  },
+  {
+    id: 'cnt-4',
+    name: 'Devon Brooks',
+    // Missing email intentionally
+    email: '',
+    company: 'Northstar Logistics',
+    role: 'Chief Operating Officer',
+    owner: 'Sarah Chen',
+    labels: ['Warm Intro'],
+    stage: 'Lead',
+    // Missing notes intentionally
+    notes: '',
+    updatedAt: '2026-10-08T11:00:00Z',
+  },
+  {
+    id: 'cnt-5',
+    name: "Liam O'Connor",
+    // Missing company and email intentionally
+    email: '',
+    company: '',
+    role: 'Independent Security Consultant',
+    owner: 'Alex Rivera',
+    labels: ['Advisor', 'Security'],
+    stage: 'Customer',
+    notes: 'External security advisor testing API penetration and webhook secret rotation capabilities.',
+    updatedAt: '2026-09-12T08:30:00Z',
+  },
+  {
+    id: 'cnt-6',
+    name: 'Sophia Zheng',
+    email: 'sophia.zheng@meridian-data.org',
+    company: 'Meridian Data Labs',
+    role: 'Head of Product',
+    owner: 'David Kim',
+    labels: ['Product Qualified', 'High Priority'],
+    stage: 'Prospect',
+    notes: 'Completed trial onboarding with 5 team seats. Praised the intuitive table-to-board sync and requested custom webhook triggers before final procurement approval.',
+    updatedAt: '2026-10-10T13:10:00Z',
+  },
+  {
+    id: 'cnt-7',
+    name: 'Carlos Mendez',
+    email: 'cmendez@solarpulse.energy',
+    company: 'SolarPulse Renewable',
+    role: 'IT Director',
+    owner: 'Sarah Chen',
+    labels: ['Mid-Market'],
+    stage: 'Lead',
+    // Missing notes intentionally
+    notes: '',
+    updatedAt: '2026-10-11T17:22:00Z',
+  },
+  {
+    id: 'cnt-8',
+    name: 'Nadia Al-Mansoor',
+    email: 'nadia.almansoor@hyperion-aerospace.com',
+    company: 'Hyperion Aerospace',
+    // Missing role intentionally
+    role: '',
+    owner: 'Alex Rivera',
+    labels: ['Enterprise', 'GovCloud'],
+    stage: 'Customer',
+    notes: 'Procurement cycle completed through AWS Marketplace. Dedicated customer success onboarding workshop scheduled for late October.',
+    updatedAt: '2026-09-19T10:05:00Z',
+  },
+  {
+    id: 'cnt-9',
+    name: 'Mateo Silva',
+    // Missing email intentionally
+    email: '',
+    company: 'Krypton Media',
+    role: 'Growth Marketing Lead',
+    owner: 'David Kim',
+    labels: ['Inbound'],
+    stage: 'Lead',
+    notes: 'Downloaded whitepaper on automated CRM workflows. Initial discovery chat pending scheduling link response.',
+    updatedAt: '2026-10-12T09:40:00Z',
+  },
+  {
+    id: 'cnt-10',
+    name: 'Chloe Bennett',
+    email: 'cbennett@nexusrobotics.ai',
+    company: 'Nexus Robotics',
+    role: 'VP Technology Alliances',
+    owner: 'Sarah Chen',
+    labels: ['Partner', 'High Priority'],
+    stage: 'Prospect',
+    notes: 'Exploring technology integration partnership. Need technical demo for the AI perception team before advancing to Qualified stage.',
+    updatedAt: '2026-10-13T15:00:00Z',
+  },
+];
+
+export const AVAILABLE_OWNERS = [
+  'Sarah Chen',
+  'Alex Rivera',
+  'David Kim',
+  'Unassigned',
+];
+
+export const AVAILABLE_LABELS = [
+  'Enterprise',
+  'High Priority',
+  'Inbound',
+  'Warm Intro',
+  'Product Qualified',
+  'Mid-Market',
+  'Advisor',
+  'Security',
+  'Partner',
+  'Cloud Native',
+];
