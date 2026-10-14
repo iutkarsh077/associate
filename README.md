@@ -1,32 +1,19 @@
-# React + TypeScript + Vite
+# Contact Table and Board Prototype
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React + TypeScript + Vite + Tailwind. Mock data, local state, no backend.
 
-Currently, two official plugins are available:
+Run: npm install, npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Design choices
+- One shared contacts state for Table and Board, so edits in one view update the other with no duplicate or stale records.
+- Table for scanning fields, Board for scanning by Stage. Details panel shared by both views for Stage and Notes edits.
+- Save commits the change and moves the card, Cancel discards it. Closing the panel returns to the same view.
+- Empty group shown so the Board always shows all four stages. Missing Email, Company, Role, or Notes shown as a clear empty state.
 
-## React Compiler
+## Trade-offs
+- Local state only, no persistence. Refresh resets edits, which keeps scope to the core flow.
+- No drag-and-drop. Stage change via the details panel is more reliable for keyboard and narrow layouts.
+- Kept search and filters out to stay within the core flow.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## What I would improve next
+- Persist edits to localStorage, add drag-and-drop between board groups with keyboard support, and add filters by Owner, Labels, and Stage.
